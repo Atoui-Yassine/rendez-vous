@@ -7,7 +7,9 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "skipTests": true
+         
         }
       },
       "root": "",
@@ -30,9 +32,16 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",
+              "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css", 
+              "./node_modules/bootstrap/scss/bootstrap.scss",
               "src/styles.scss"
+              
+           
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -100,5 +109,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "f258850e-cf17-49e4-b546-7fdfc7886e44"
   }
 }
