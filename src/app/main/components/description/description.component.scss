@@ -1,0 +1,32 @@
+.description{
+   margin: 5px 10px ;
+
+   .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 27px;
+    font-weight: 400;
+    height: 40px;
+    padding-top: 10px;
+   }
+   .desc_phone{
+    display: block;
+   height: 40px;
+   padding-left: 20px;
+    padding-top: 15%;
+        
+   }
+   .desc_text{
+    padding-left: 20px ;
+    padding-top: 20%;
+   }
+   .desc_position{
+      padding-left: 20px ;
+      padding-top: 10px;
+      input:active{
+        border-color: none; 
+      }
+   }
+
+}

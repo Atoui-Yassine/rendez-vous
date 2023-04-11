@@ -6,6 +6,7 @@ import { ErrorLayoutComponent } from './error-layout/error-layout.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { RouterModule } from '@angular/router';
+import { ProfileLayoutComponent } from './profile-layout/profile-layout.component';
 
 
 
@@ -15,7 +16,8 @@ import { RouterModule } from '@angular/router';
     AuthLayoutComponent,
     ErrorLayoutComponent,
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    ProfileLayoutComponent
   ],
   imports: [
     CommonModule,

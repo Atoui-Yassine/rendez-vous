@@ -2,20 +2,25 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MenuComponent } from './components/menu/menu.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { LoadbarComponent } from './components/loadbar/loadbar.component';
 
 
 
 @NgModule({
   declarations: [
     MenuComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    LoadbarComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    CarouselModule,
   ],
   exports:[
     MenuComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    LoadbarComponent
   ]
 })
 export class SharedModule { }

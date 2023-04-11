@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FilterCategoryComponent } from './filter-category/filter-category.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileIdComponent } from './profile-id/profile-id.component';
+import { RendezVousComponent } from './rendez-vous/rendez-vous.component';
 
 const routes: Routes = [
   {
@@ -16,7 +17,7 @@ const routes: Routes = [
   {
     path: '', children: [
       {
-        path: "filter/:id",
+        path: "filter",
         component: FilterCategoryComponent
       }
     ]
@@ -29,10 +30,19 @@ const routes: Routes = [
       }
     ]
   },
+  {
+    path: '', children: [
+      {
+        path: "rendez-vous",
+        component:  RendezVousComponent
+
+      }
+    ]
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class MainRoutingModule { }
+export class MainRoutingModule {}

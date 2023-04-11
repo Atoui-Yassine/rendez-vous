@@ -1,0 +1,145 @@
+.main{
+    width: 100%;
+    background: linear-gradient(180deg, #F1FBFF 0%, #F5FCFF 45.37%, #FAFBFF 79.66%, #FFFFFF 101.29%);
+   
+    position: relative;
+    left: 0;
+    right: 0;
+    transition: all .2s;
+    margin-top: 80px;
+    .indicator{
+        
+        width: 50%;
+         padding-right: 15px;
+         padding-left: 15px;
+        margin-left: 30%;
+        padding-top: 50px;
+        display: block;
+        .progress_indicator{
+            
+            margin: 0 0 1em;
+            padding: 0;
+            display: flex;
+           /// justify-content: space-between;
+            li{
+                list-style: none;
+                text-align: center;
+                width: 20%;
+                padding: 0;
+                margin: 0;
+                position: relative;
+                display: block;
+                
+                    .bubble{
+                        border-radius: 1000px;
+                        width: 24px;
+                        height: 24px;
+                        
+                        background-color: #ddd;
+                        display: block;
+                        margin: 0 auto .5em;
+                        border-bottom: 1px solid #888;
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            height: 3px;
+                            z-index: 0;
+                            width: 100%;
+                            left: 0;
+                            top: 11px;
+                            color: #4f4f4f;
+                            background: #ddd;
+                        }
+                        &.end_bubble{
+                            &::before{
+                                position: absolute;
+                                width: 50%;
+                                right: 0;
+                            }
+                        }
+                    }
+                    &.active{
+                        .bubble{
+                            background-color: #ffd400;
+                            border-color: #122a3f;
+                            &::before{
+                                background-color: #ffd400;
+                                width: 100%;
+                                content: '';
+                                color: #4f4f4f;
+                                position: absolute;
+                                left: 50%;
+                            }
+                            &.end_bubble{
+                                &::before{
+                                    background-color: #ffd400;
+                                    position: absolute;
+                                    width:0;
+                                    right: 0;
+                                }
+                            }
+                        }
+                    }
+                
+            }
+            
+        }
+        .card_category{
+            background-color: rgb(245, 239, 239);
+            border: 1px solid #e6e6e6;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            width: 80%;
+            clear: both;
+            .card_category_top{
+                background-color: #0696D6;
+                border-radius: 10px 10px 0px 0px ;
+                display: flex;
+                clear: both;
+                .card_img{
+                    img{
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 10px !important;
+                        margin: 20px 5px auto 10px;
+                    }
+                   
+                }
+                .card_profile{
+                    margin: 10px;
+                    display: block;
+                    //margin: 0;
+                    
+                    width: 100%;
+                    .profile_name{
+                        color: white;
+                        text-decoration: none;
+                        font-size: 20px;
+                        font-weight: bold;
+                        margin: 0;
+                        cursor: pointer;
+                    }
+                    .profile_spee{
+                        color: #F1FBFF;
+                        font-size: 18px;
+                        padding-left: 5px;
+                        margin: 0;
+                    }
+                    .profile_adr{
+                        display: flex;
+                        margin-left: 5px;
+                        color: #F1FBFF;
+                        margin: 0;
+                        i{
+                            
+                            padding-right: 5px;
+                            font-size: 12px;
+                            padding-top: 3px;
+                        }
+                       
+                    }
+                }
+            }
+        }
+    }
+}

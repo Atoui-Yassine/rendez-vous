@@ -1,0 +1,47 @@
+.map-info-card{
+    .userimg{
+        img{
+            height: 64px;
+            width: 64px;
+        }
+    }
+    .user-info{
+        h4{
+            color: var( --color-blue);
+        }
+        p{
+            color: var(--color-light-grey);
+        }
+    }
+    .rating{
+        
+        i{
+            font-size: 20px;
+            margin-left:2px;
+            margin-right:2px;
+            font-weight: 600;
+        }
+        .bi-star{
+            color: var(--color-light-grey);
+        }
+        .bi-star-fill{
+            color: var(--color-gold);
+        }
+        .bi-star-half{
+            color: var(--color-gold);
+        }
+        
+    }
+    a{
+        width: 100%;
+        background-color:var(--color-light-orange) ;
+        text-align: center;
+        color: #fff;
+        font-size: 15px;
+        font-family: var(--font-poppins );
+        border-radius: 5px;
+        padding: 5px 20px ;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,15 @@
+
+  <mat-card>
+    
+    <mat-card-content>
+      <mat-calendar  #calendar [startAt]="startDate" [selected]="selectedDate" [ngClass]="selected?'selected':''"
+        (selectedChange)="onDateSelected($event)" class="custom-calendar" [dateFilter]="dateFilter" [ngClass]="dateFilter?'':'disabled'">
+      </mat-calendar>
+    </mat-card-content>
+  </mat-card>
+ <div class="date_heures" *ngIf="selected"  >
+   <div  class="heures" *ngFor="let heure of heures" (click)="selectedHeure(heure)">
+  {{heure.h}}
+   </div>
+ </div>
+ 

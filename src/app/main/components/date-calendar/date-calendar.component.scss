@@ -1,0 +1,121 @@
+.custom-calendar {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+
+    &::ng-deep .mat-calendar-controls{
+        background: #601ff7;
+        margin: 0;
+        border-radius: 10px 10px 0 0;
+            font-size: 16px;
+            padding: 5px;
+            color: white;
+            
+    }
+
+    &::ng-deep .mat-calendar-period-button{
+        margin-left: 40%;
+        svg{
+            display: none;
+        }
+    }
+    &::ng-deep .mat-calendar-previous-button{
+        position: absolute;
+        left: 0;
+        top: 30px;
+        margin-left: 15px;
+        &.mat-calendar-previous-button::after{
+            color: white;
+            height: 9px;
+            width: 9px;
+        }
+    }
+    &::ng-deep .mat-calendar-next-button{
+        position: absolute;
+        right: 0;
+        top: 30px;
+        margin-right: 6px;
+        &.mat-calendar-next-button::after{
+            color: white;
+            height: 9px;
+            width: 9px;
+        }
+    }
+
+
+    &::ng-deep .mat-calendar-table-header{
+       // display: flex;
+        justify-content:space-between ;
+        margin: 0;
+        padding: 3px;
+        width: 100% !important;
+        box-sizing: border-box;
+
+        .cdk-visually-hidden{
+            display: none;
+        }
+        
+            span{
+                color: #601ff7;
+               margin: 2px 25px;
+            }
+        
+    }
+    &::ng-deep .mat-calendar-body-cell-content{
+        border-radius: 0;
+        
+        margin: 0;
+        left: 0;
+        border-style: none;
+        &:hover{
+            background: rgba(0, 0, 255, 0.678);
+        }
+        &.mat-calendar-body-selected{
+            background-color: aqua;
+          }
+    }
+    &::ng-deep .mat-calendar-body-cell{
+        height: 111%;
+        width: 111.1%;
+    }
+    &::ng-deep .mat-calendar-body-disabled{
+      //  background-color: aqua;
+      background: #9166f72f;
+      &:hover{
+        color: rgba(97, 95, 93, 0.781);
+       
+      }
+      
+      &::ng-deep .mat-calendar-body-cell-content{
+        &:hover{
+            background: none;
+        }
+
+      }
+    }
+}
+.date_heures{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 10px;
+    justify-content: space-between;
+    .heures{
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 12px;
+        margin: 5px 5px;
+        color: rgba(0, 89, 255, 0.911);
+        font-weight: 600;
+        &:hover{
+            color: white;
+            background:  rgba(0, 89, 255, 0.911);
+        }
+        
+    }
+}
+ 

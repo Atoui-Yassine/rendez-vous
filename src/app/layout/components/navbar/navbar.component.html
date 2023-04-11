@@ -1,1 +1,44 @@
+<header >
 
+
+    <div class="navbar">
+        <a  [routerLink]="['']" class="logo">
+          <img src="https://modactivity.travelerwp.com/wp-content/uploads/2022/05/activity.svg" alt="" srcset="">
+        </a>
+        <nav class="navlist"  [ngClass]="dropdown=='desti'? 'active':''">
+            <a [routerLink]="['']" class="active"> HOME</a>
+            <a [routerLink]="['']">ABOUT</a>
+            <a [routerLink]="['']">CONTACT</a>
+        </nav>
+        <div class="icons">
+             
+            <div id="notifcation-btn" class="fas fa-notification">
+              <i class="bi bi-bell"></i>
+              <span class="notif">1</span>
+            </div>
+            <div id="user-btn" class="fas fa-user" (click)="dopdownClick('info')">
+              <i class="bi bi-person"></i>
+            </div>
+            <div id="menu-btn" class="fas fa-bars" (click)="dopdownClick('desti')">
+              <i class="bi bi-list"></i>
+            </div>
+    
+        </div>
+        <div class="userinfo" [ngClass]="dropdown=='info'? 'active':''">
+          <a class=" Profile" routerLink="">
+            <i class="bi bi-person-fill"></i>
+            <span class="spanUser">Profile</span>
+          </a>
+          <a class="register" [routerLink]="['/login-register']">
+            <i class="bi bi-box-arrow-in-right"></i>
+            <span> Login / Register </span>
+          </a>
+          
+          <a class="logout" routerLink="">
+            <i class="bi bi-box-arrow-left"></i>
+            <span> Déconnexion </span>
+          </a>
+    
+        </div>
+    </div>
+    </header>

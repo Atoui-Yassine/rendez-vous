@@ -1,1 +1,26 @@
-<p>menu works!</p>
+
+<div class=" container-fluid ">
+  <p class="title text-center text-nowrap text-uppercase"> Nos Categories</p>
+  <p class="description text-center ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, omnis.</p>
+</div>
+<div class="category">
+    <owl-carousel-o [options]="customOptions"  >
+      <ng-container *ngFor="let slide of dynamicSlides" >
+     
+        <ng-template carouselSlide >
+          <div class="slider_template px-3 px-lg-4 py-3 py-lg-4" (click)="navigateToProfile(slide.id)"  >
+          <div class="slider_img">
+            <img [src]="slide.src" [alt]="slide.alt" [title]="slide.title" >
+            <h3 class="text-center">
+              {{slide.title}}
+            </h3>
+          </div>
+        
+        </div>
+          
+        </ng-template>
+      
+      </ng-container>
+    </owl-carousel-o>
+     
+    </div>

@@ -1,0 +1,84 @@
+<div class="container-fluid mt-4">
+    <div class="row container mt-4 px-0 flex-column-reverse flex-lg-row">
+        <div class="col-lg-4 col-12  filter-list d-flex flex-column p-0">
+            <div class="filter-item d-flex flex-column pb-5">
+                <div class="title ">
+                    Filters
+                </div>
+                <div class="filter mt-4">
+                    <label for="categorie">Category</label>
+                    <select id="categorie" name="sort" class="form-control select float-end mt-2" >
+                        <option disabled selected="">Select categorie</option>
+                        <option *ngIf="categorySelected?.parent" (click)="backToParent()"> back</option>
+                        <option *ngFor="let item of getCategoties()" [value]="item.id" [selected]="categorySelected?.id ==item.id"(click)="categorieChange(item)" >{{item.name}}</option>
+                    </select>
+                </div>
+
+                <div class="filter mt-3">
+                    <label for="brand">SubCategory</label>
+                    <select id="brand" name="sort" class="form-control select float-end mt-2" >
+                        <option disabled="" selected="">Select device brand</option>
+                        <option *ngFor="let item of getSubCategories()" [value]="item.id" (click)="filterClick(item.id.toString(),'cat_id')">{{item.name}}</option>
+                      
+                    </select>
+                </div>
+
+                <div class="filter mt-3">
+                    <label >Service type</label>
+                  
+                    <div class="d-flex align-items-center custom-radio mt-2">
+                        
+                        <div class="custom-radio-item flex-grow-1">
+                          <input type="radio" name="population" value="single" id="population_single" class=""  (change)="filterClick('a_domicile','type')">
+                          <label class="font-12 cursor-pointer" for="population_single">
+                            A Domicile
+                          </label>
+                        </div>
+                        <div class="custom-radio-item flex-grow-1">
+                          <input type="radio" name="population" value="group" id="population_group" class="" (change)="filterClick('sur_place','type')">
+                          <label class="font-12 cursor-pointer " for="population_group">
+                            Sur Place
+                          </label>
+                        </div>
+                      </div>
+                </div>
+            </div>
+
+            <div class="filter-item d-flex flex-column pb-5 mt-4">
+                <div class="title">
+                    Location
+                </div>
+
+                <div class="filter mt-3">
+                    <label for="brand">Country</label>
+                    <select id="brand" name="sort" class="form-control select float-end mt-2">
+                        <option disabled="" selected="">Select country</option>
+                        <option value="">All</option>
+                        
+                        <option value="top_sale">A Domicile</option>
+                        <option value="top_sale">On place</option>
+                    </select>
+                </div>
+                <div class="filter mt-3">
+                    <label for="brand">Province</label>
+                    <select id="brand" name="sort" class="form-control select float-end mt-2" disabled>
+                        <option disabled="" selected="">Select Province</option>
+                        <option value="">All</option>
+                      
+                    </select>
+                </div>
+                <div class="filter mt-3">
+                    <label for="brand">City</label>
+                    <select id="brand" name="sort" class="form-control select float-end mt-2" disabled>
+                        <option disabled="" selected="">Select City</option>
+                        <option value="">All</option>
+                       
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8 col-12 p-0 ps-lg-2">
+            <app-search-item *ngFor="let i of [].constructor(10)"></app-search-item>
+        </div>
+    </div>
+</div>

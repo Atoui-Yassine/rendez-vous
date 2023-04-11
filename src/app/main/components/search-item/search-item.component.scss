@@ -1,0 +1,89 @@
+.container-fluid{
+    border: 1px solid #ececec;
+    padding: 20px;
+    box-shadow: 0 5px 10px 0 #0000000d !important; 
+    border-radius: 10px;
+    cursor: pointer;
+
+    .user-info{
+        .username{
+            font-size: 20px;
+            color: var(--color-blue);
+            font-weight: 600;
+            font-family: var(--font-montaserra);
+            
+        }
+        .post{
+            font-size: 15px;
+            font-family: var(--font-montaserra);
+            color: var(--color-light-grey-2);
+        }
+        .skills{
+            .skill{
+                text-align: center;
+                width: fit-content;
+                padding: 10px 5px;
+                font-size: 13px;
+                background-color: var(--color-grey); 
+                margin-right: 10px;
+                margin-top: 5px;
+                padding-top: 0;
+                padding:  3px 10px;
+                border-radius: 10px;
+                box-shadow: 5px 5px 7px 0 rgba(0, 0, 0, .05) !important; 
+                span{
+                    color: var(--color-light-grey-2);
+                    font-family: var(--font-montaserra);
+                }
+            }
+        }
+        .about{
+            font-size: 15px;
+            color: var(--color-light-grey-2);
+            font-family: var(--font-montaserra);
+        }
+    }
+    .availble{
+        .availble-text{
+            font-size: 18px;
+            color: var(--color-light-grey-2);
+            font-family: var(--font-montaserra);
+
+        }
+        .d-flex{
+            span{
+                font-size: 18px;
+                font-weight: 600;
+                color: var(--color-light-orange);
+                font-family: var(--font-poppins);
+            }
+        }
+    }
+    .stars-card{
+        i{
+            font-size: 20px;
+            color: var(--color-light-orange);
+            margin-right: 3px ;
+        
+        }
+    }
+    .btn-chat{
+      
+        a{
+            width: 100%;
+            cursor: pointer;
+            background-color: var(--color-light-orange);
+            text-align: center;
+            font-size: 20px;
+            border-radius: 10px;
+            color: #fff;
+            font-family: var(--font-montaserra);
+            font-weight: 500;
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .05) !important; 
+            transition: background-color .25s ease-in;
+            &:hover{
+                background-color: var(--color-light-orange-background);
+            }
+        }
+    }
+}

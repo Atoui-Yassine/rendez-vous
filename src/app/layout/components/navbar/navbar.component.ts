@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
+  dropdown:string='';
+  dopdownClick(value :string){
+  this.dropdown= value==this.dropdown?'':value;
 
+ }
 }

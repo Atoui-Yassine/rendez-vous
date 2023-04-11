@@ -1,0 +1,73 @@
+.container{
+    max-width: 1100px;
+    margin: auto;
+
+    .filter-list{
+        .filter-item{
+
+            border-radius: 8px;
+            border: 1px solid #ececec;
+            padding: 20px;
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .05) !important; 
+            .title{
+                font-size: 20px;
+                color: var(--color-blue);
+                font-weight: 600;
+                font-family: var(--font-montaserra);
+                text-decoration: underline;
+            }
+            
+            .filter{
+                label{
+                    font-size: 15px;
+                    color: var(--color-blue);
+                    font-family: var(--font-montaserra);
+                    font-weight: 600;
+                    margin-bottom: 5px;
+                    
+                }
+                select{
+                    color: var(--color-light-grey-2);
+                    outline: none;
+                    box-shadow: 0 5px 10px 0 rgba(0,0,0,.05)!important;
+                    &:active{
+                        outline: none !important;
+                        border-color: #ececec !important;
+                    }
+                    
+                }
+            }
+            
+    }
+}
+}
+.custom-radio{
+    input{
+        display: none;
+    }
+    border-radius: 10px;
+    border: 1px solid #ececec;
+    overflow: hidden;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.05)!important;
+    .custom-radio-item{
+       
+        input:checked + label{
+            background-color: var(color-light-orange);
+        }
+        label{
+            color: var(--color-light-grey-2) !important;
+            padding: 10px 15px;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            height: inherit;
+            margin-bottom: 0  !important;
+            font-size: 13px !important;
+            font-family: var(--font-montaserra) !important;
+        }
+        input:checked + label{
+            color: #fff !important;
+            background-color: var(--color-light-orange);
+        }
+    }
+}

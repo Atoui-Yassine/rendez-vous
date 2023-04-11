@@ -1,0 +1,178 @@
+[
+    {
+        "id": 1,
+        "name": "Doctor",
+        "parent": null
+        
+    },
+    {
+        "id": 101,
+        "name": "General Practitioner",
+        "parent":1
+    },
+    {
+        "id": 102,
+        "name": "Dentist",
+        "parent":1
+    },
+    {
+        "id": 103,
+        "name": "Pediatrician",
+        "parent":1
+    },
+    {
+        "id": 104,
+        "name": "Surgeon",
+        "parent":1
+    },
+    {
+        "id": 105,
+        "name": "Psychiatrist",
+        "parent":1
+    },
+    {
+        "id": 2,
+        "name": "Plumber",
+        "parent":null
+    },
+    {
+        "id": 201,
+        "name": "Residential Plumber",
+        "parent":2
+    },
+    {
+        "id": 202,
+        "name": "Commercial Plumber",
+        "parent":2
+    },
+    {
+        "id": 203,
+        "name": "Industrial Plumber",
+        "parent":2
+    },
+    {
+        "id": 3,
+        "name": "Electrician",
+        "parent":null
+    },
+    {
+        "id": 301,
+        "name": "Residential Electrician",
+        "parent":3
+    },
+    {
+        "id": 302,
+        "name": "Commercial Electrician",
+        "parent":3
+    },
+    {
+        "id": 303,
+        "name": "Industrial Electrician",
+        "parent":3
+    },
+    {
+        "id": 4,
+        "name": "Mechanic",
+        "parent": null
+    },
+    {
+        "id": 401,
+        "name": "Automobile Mechanic",
+        "parent": 4
+    },
+    {
+        "id": 402,
+        "name": "Motorcycle Mechanic",
+        "parent": 4
+    },
+    {
+        "id": 403,
+        "name": "Diesel Mechanic",
+        "parent": 4
+    },
+    {
+        "id": 404,
+        "name": "Aircraft Mechanic",
+        "parent": 4
+    },
+    {
+        "id": 405,
+        "name": "Marine Mechanic",
+        "parent": 4
+    },
+    {
+        "id": 5,
+        "name": "Carpenter",
+        "parent": null
+    },
+    {
+        "id": 501,
+        "name": "Framing Carpenter",
+        "parent": 5
+    },
+    {
+        "id": 502,
+        "name": "Finish Carpenter",
+        "parent": 5
+    },
+    {
+        "id": 503,
+        "name": "Cabinet Maker",
+        "parent": 5
+    },
+    {
+        "id": 504,
+        "name": "Furniture Maker",
+        "parent": 5
+    },
+    {
+        "id": 505,
+        "name": "Siding Installer",
+        "parent": 5
+    },
+    {
+        "id": 6,
+        "name": "Painter",
+        "parent": null
+    },
+    {
+        "id": 601,
+        "name": "Residential Painter",
+        "parent": 6
+    },
+    {
+        "id": 602,
+        "name": "Commercial Painter",
+        "parent": 6
+    },
+    {
+        "id": 603,
+        "name": "Industrial Painter",
+        "parent": 6
+    },
+    {
+        "id": 604,
+        "name": "Automotive Painter",
+        "parent": 6
+    },
+    {
+        "id": 7,
+        "name": "Landscaper",
+        "parent": null
+    },
+    {
+        "id": 701,
+        "name": "Lawn Care Specialist",
+        "parent": 7
+    },
+    {
+        "id": 702,
+        "name": "Garden Designer",
+        "parent": 7
+    },
+    {
+        "id": 703,
+        "name": "dhkfjdfksdgfkgsd",
+        "parent": 702
+    }
+]

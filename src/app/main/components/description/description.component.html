@@ -1,0 +1,48 @@
+<div class="description">
+    <div class="title">
+        <p>Saisissez vos informations
+        </p>
+    </div>
+    <div class="desc_phone">
+        <p>Phone Number :</p>
+        <section class="phone_number">
+           
+          
+            <form #f="ngForm" [formGroup]="phoneForm">
+              <div class="wrapper">
+                <ngx-intl-tel-input
+                  [cssClass]="'custom'"
+                  [preferredCountries]="preferredCountries"
+                  [enableAutoCountrySelect]="false"
+                  [enablePlaceholder]="true"
+                  [searchCountryFlag]="true"
+                  [searchCountryField]="[
+                    SearchCountryField.Iso2,
+                    SearchCountryField.Name
+                  ]"
+                  [selectFirstCountry]="false"
+                  [selectedCountryISO]="CountryISO.Tunisia"
+                  [phoneValidation]="true"
+                  [separateDialCode]="separateDialCode"
+                  [numberFormat]="PhoneNumberFormat.National"
+                  name="phone"
+                  formControlName="phone"
+                  
+                >
+                </ngx-intl-tel-input>
+                
+              </div>
+              
+            </form>
+           
+          </section>
+    </div>
+    <div class="desc_text">
+        <p>Description : </p>
+        <textarea name="" id="" cols="46" rows="8" ></textarea>
+    </div>
+    <div class="desc_position">
+        <p>Localisation</p>
+      <input type="text" placeholder="City" value="{{cityName}}" (click)="getLocation()">
+    </div>
+</div>

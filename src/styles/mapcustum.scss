@@ -1,0 +1,108 @@
+.custom-clustericon {
+	img {
+		display: none;
+	}
+
+	position: relative;
+	text-align: center;
+	font-size: 16px;
+	color: #fff;
+	font-weight: 500;
+	border-radius: 50%;
+	height: 36px !important;
+	width: 36px !important;
+	line-height: 36px;
+	background: #1f3b64;
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, .5);
+
+	div {
+		height: 36px !important;
+		width: 36px !important;
+		line-height: 36px !important;
+		span {
+			position: relative;
+			color: #fff;
+			line-height: 36px !important;
+			z-index: 10000002 !important;
+			font-size: 20px;
+			font-weight: 100;
+		}
+
+		&::before {
+			border: 17px solid #1f3b64;
+			opacity: 0.5;
+			content: '';
+			position: absolute;
+			border-radius: 100%;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 1000000 !important;
+			box-sizing: border-box;
+			animation: cluster-animation 2.5s infinite;
+			animation-fill-mode: forwards;
+		}
+	}
+	&:nth-child(4n-4){
+		div{
+			&::before{
+				animation-duration: 1.8s;
+			}
+		}
+	}
+	&:nth-child(4n-3){
+		div{
+			&::before{
+				animation-duration: 1.7s;
+			}
+		}
+	}
+	&:nth-child(4n-2){
+		div{
+			&::before{
+				animation-duration: 2s;
+			}
+		}
+	}
+	&:nth-child(4n-1){
+		div{
+			&::before{
+				animation-duration: 1.5s;
+			}
+		}
+	}
+}
+
+@keyframes cluster-animation {
+	0% {
+		opacity: 1;
+		scale: 1;
+		/* At the start of the animation, the text is invisible */
+	}
+
+	100% {
+		scale: 2;
+		opacity: 0;
+		/* At the end of the animation, the text is fully visible */
+	}
+}
+
+// div[title="spot"] {
+// 	// display: none;
+// 	// img{
+// 	// 	height: 36px;
+// 	// 	width: 36px;
+// 	// 	border-radius: 50%;
+// 	// }
+// }
+img[src$="#custom_marker"] {
+	border: 3px solid #fff !important;
+	border-radius: 50%;
+	height: 50px !important;
+	width: 50px !important;
+    
+}
+// .gm-style-iw-d{
+// 	width: 300px !important;
+// }
