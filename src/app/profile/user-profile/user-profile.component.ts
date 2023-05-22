@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./user-profile.component.scss']
 })
 export class UserProfileComponent {
-
+  displayPro=true;
+  display = false;
+  onPress() {
+    this.display = true;
+    this.displayPro=false;
+  }
 }

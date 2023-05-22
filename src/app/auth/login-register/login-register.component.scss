@@ -84,8 +84,8 @@ form {
 input {
 	background-color: #eee;
 	border: none;
-	padding: 12px 15px;
-	margin: 8px 0;
+	padding: 8px 15px;
+	margin: 2px 0;
 	width: 100%;
 }
 
@@ -271,3 +271,14 @@ footer a {
 	}
 
 }
+input#email:-moz-autofill,
+input#email:-moz-autofill-preview,
+input#email:-webkit-autofill {
+  filter: none;
+  background: #fff !important;
+}
+
+input:autofill, select:autofill{
+	background-image: none !important;
+}
+input{ text-rendering:unset}

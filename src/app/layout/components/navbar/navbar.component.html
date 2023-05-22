@@ -25,16 +25,16 @@
     
         </div>
         <div class="userinfo" [ngClass]="dropdown=='info'? 'active':''">
-          <a class=" Profile" routerLink="">
+          <a class=" Profile" (click)="profileNavigation()">
             <i class="bi bi-person-fill"></i>
             <span class="spanUser">Profile</span>
           </a>
-          <a class="register" [routerLink]="['/login-register']">
+          <a *ngIf="!(auth.currentUser$|async)" class="register" [routerLink]="['/login-register']">
             <i class="bi bi-box-arrow-in-right"></i>
             <span> Login / Register </span>
           </a>
           
-          <a class="logout" routerLink="">
+          <a class="logout"  *ngIf="(auth.currentUser$|async)" (click)="logout()">
             <i class="bi bi-box-arrow-left"></i>
             <span> Déconnexion </span>
           </a>

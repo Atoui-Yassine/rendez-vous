@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component';
 import { ErrorLayoutComponent } from './layout/error-layout/error-layout.component';
 import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
+import { ProfileLayoutComponent } from './layout/profile-layout/profile-layout.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,15 @@ const routes: Routes = [
       {
         path: '',
         loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+      }
+    ]
+  },
+  {
+    path: '', component: ProfileLayoutComponent, children: [
+      {path: '', redirectTo: '/', pathMatch: 'full'},
+      {
+        path: '',
+        loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule)
       }
     ]
   },
