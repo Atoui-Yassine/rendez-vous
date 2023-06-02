@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { InfosServiceService } from 'src/app/Services/service/infos-service.service';
+import { AppUser } from 'src/app/models/AppUser';
 
 @Component({
   selector: 'app-profile-id',
@@ -9,7 +11,9 @@ import { ActivatedRoute } from '@angular/router';
 export class ProfileIdComponent implements OnInit{
   isLoading=true
   tab= "about"
-  constructor(private route:ActivatedRoute){}
+  id?: number;
+  user?:AppUser;
+  constructor(private route:ActivatedRoute,private info:InfosServiceService){}
   ngOnInit() {
     this.route.queryParams
       .subscribe(params => {
@@ -19,6 +23,11 @@ export class ProfileIdComponent implements OnInit{
       }
     );
     this.getData()
+
+    this.route.params.subscribe(params => {
+      this.id = +params['id'];
+      console.log("id"+this.id);
+    });
   }
 
   getData(){
@@ -26,4 +35,14 @@ export class ProfileIdComponent implements OnInit{
       this.isLoading  =false
     },300)
   }
+public loadUserByID(id:any){
+  this.info.loadUserById(id).subscribe((res)=>{
+   this
+  },
+ err=>{
+  console.log("Email or Password invalid")
+ } 
+  )
+}
+
 }

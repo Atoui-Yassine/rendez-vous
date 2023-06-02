@@ -10,28 +10,11 @@ export class HeaderComponent {
   dynamicSlides = [
     {
       id: 1,
-      src:'../../../../assets/images/imgcarousel/mecanicin.jpg',
+      src:'../../../../assets/images/imgcarousel/8ff3f5e2d3bb95b2511f76dd128e622f.jpg',
       alt:'mecanicin',
       title:'mecanicin'
-    },
-    {
-      id: 2,
-      src:'../../../../assets/images/imgcarousel/medecin.jpg',
-      alt:'medecin',
-      title:'medecin'
-    },
-    {
-      id: 3,
-      src:'../../../../assets/images/imgcarousel/plombier.jpg',
-      alt:'plombier',
-      title:'plombier'
-    },
-    {
-      id: 4,
-      src:'../../../../assets/images/imgcarousel/retaurant.jpg',
-      alt:'retaurant',
-      title:'retaurant'
     }
+   
   ]
 
   constructor() { }

@@ -25,7 +25,7 @@
     
         </div>
         <div class="userinfo" [ngClass]="dropdown=='info'? 'active':''">
-          <a class=" Profile" (click)="profileNavigation()">
+          <a class=" Profile" (click)="loadProfileComponent()">
             <i class="bi bi-person-fill"></i>
             <span class="spanUser">Profile</span>
           </a>
@@ -37,6 +37,12 @@
           <a class="logout"  *ngIf="(auth.currentUser$|async)" (click)="logout()">
             <i class="bi bi-box-arrow-left"></i>
             <span> Déconnexion </span>
+            
+          </a>
+          <a class="logout"  *ngIf="(auth.currentUser$|async)" (click)="onSettingsClick()" >
+            <i class="bi bi-gear pt-0"></i>
+            <span>Setting</span>
+            
           </a>
     
         </div>

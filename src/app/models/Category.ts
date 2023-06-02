@@ -1,10 +1,10 @@
+import { Img } from "./Img";
+
 export interface Category{
 
-    id:number,
-    name:string,
-    parent:number |null
+  id: number;
+  name: string;
+  parent: Category;
+  childCategories: Category[];
+  image: Img;
 }
-// export interface Subcategory {
-//     id: number;
-//     name: string;
-//   }

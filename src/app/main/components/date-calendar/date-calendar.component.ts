@@ -13,6 +13,7 @@ export class DateCalendarComponent{
   startDate = new Date();
   selectedDate?: Date;
   selected:boolean=false;
+  selected_h: any;
   onDateSelected(date: Date) {
     this.selectedDate = date;
    if(this.dateFilter(date)){
@@ -31,7 +32,7 @@ export class DateCalendarComponent{
     new Date('2023-04-21').toDateString(),
     new Date('2023-04-22').toDateString(),
     new Date('2023-04-23').toDateString(),
-    new Date('2023-04-30').toDateString(),
+    new Date('2023-05-29').toDateString(),
 
   ];
   
@@ -39,7 +40,7 @@ export class DateCalendarComponent{
     const day = date.getDay();
     
     
-    return this.disabledDates.includes(date.toDateString());
+    return !this.disabledDates.includes(date.toDateString());
   };
   heures =[
     {
@@ -76,10 +77,10 @@ export class DateCalendarComponent{
       h:"18:30"
     },
   ]
-  selcted_heure='';
-  selectedHeure(heure : any){
-    this.selcted_heure=heure;
-    console.log("heure",this.selcted_heure)
+  
+ 
+  selectedHeure(heure: any) {
+    this.selected_h = heure;
   }
   
  

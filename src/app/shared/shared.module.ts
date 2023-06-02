@@ -6,6 +6,9 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { LoadbarComponent } from './components/loadbar/loadbar.component';
 import { UserSettingsComponent } from './components/user-settings/user-settings.component';
 import { ProSettingComponent } from './components/pro-setting/pro-setting.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
 
 
 
@@ -20,6 +23,10 @@ import { ProSettingComponent } from './components/pro-setting/pro-setting.compon
   imports: [
     CommonModule,
     CarouselModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    ToastrModule.forRoot()
   ],
   exports:[
     MenuComponent,

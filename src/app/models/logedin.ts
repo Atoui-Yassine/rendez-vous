@@ -4,6 +4,6 @@ export interface loggedin{
     lastName:string,
     email:string,
     roles:string[],
-    accessToken:string,
+    token:string,
     refresh_Token:string
 }

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ReplaySubject, map } from 'rxjs';
+import { Observable, ReplaySubject, map } from 'rxjs';
 import { AppUser ,infoUser} from 'src/app/models/AppUser';
 import { EduExp } from 'src/app/models/Experience';
 import { ExpAndEdu } from 'src/app/models/ExperienceAndEducation';
@@ -55,4 +55,16 @@ export class InfosServiceService {
   loadinfo(){
     return this.Http.get<AppUser>(this.baseurl+"user")
   }
+
+public searchbar(model:any): Observable<any>{
+    return this.Http.get<any>(this.baseurl+ "user/search", model);
+}
+
+ public loadUserpro():Observable<any>{
+  return this.Http.get<any>(this.baseurl+"user/pro");
+ }
+
+ public loadUserById(id:any):Observable<any>{
+  return this.Http.get<any>(this.baseurl+"user", id)
+ }
 }

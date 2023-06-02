@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable, ReplaySubject, map } from 'rxjs';
@@ -16,10 +16,11 @@ export class AuthService {
   userRole: string = '';
   apiUrl = environment.apiurl
   refreshTokenmodel !: refreshTokenModel
+  
   constructor(private http: HttpClient,
     private route: Router,
     private info: InfosServiceService) { }
-
+   
 
   login(model: any) {
     return this.http.post<loggedin>(this.apiUrl + "auth/signin", model).pipe(
@@ -75,4 +76,6 @@ export class AuthService {
     }
     
   }
+
+ 
 }

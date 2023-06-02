@@ -72,7 +72,7 @@ register():void{
 login():void{
   this.auth.login(this.loginForm.value).subscribe((res)=>{
     this.toastr.success("Conncté ...")
-    this.info.loadUser()
+    //this.info.loadUser()
     //this.route.navigate(['.']);
   },
  err=>{

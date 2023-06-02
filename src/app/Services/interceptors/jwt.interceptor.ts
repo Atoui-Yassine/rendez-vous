@@ -26,22 +26,39 @@ export class JwtInterceptor implements HttpInterceptor {
     this.auth.currentUser$.pipe(take(1)).subscribe(res=>{
       if(res){
         this.userlogedin = res
-        //this.refreshToken.refreshToken=res.refresh_Token
+        
       } 
      
     })
     
-
-    if(this.userlogedin){
+    const user  = localStorage.getItem("user")
+    if(user !=null){
+      console.log('====================================');
+      console.log(user);
+      console.log('====================================');
+      const finalUser :loggedin =JSON.parse(user)
       request = request.clone({
         setHeaders:{
-          Authorization: `Bearer ${this.userlogedin.accessToken}`
+          Authorization: `Bearer ${finalUser.token}`
         }
       })
+      console.log('====================================');
+      console.log(request.headers);
+      console.log('====================================');
+    }
+    
+
+    // if(this.userlogedin){
+    //   request = request.clone({
+    //     setHeaders:{
+    //       Authorization: `Bearer ${this.userlogedin.accessToken}`
+    //     }
+    //   })
      
       
-    }
-    console.log("aaaaaaaaaaaaaaa",this.userlogedin,request.headers);
+    // }
+
+    console.log("1111111111",this.userlogedin,request.headers);
     return next.handle(request);
   }
 }

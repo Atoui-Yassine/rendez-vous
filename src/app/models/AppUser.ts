@@ -1,5 +1,7 @@
+import { Category } from "./Category";
 import { EduExp } from "./Experience";
-
+import {Address} from "./Address";
+import { ProfilePro } from "./ProfilePro";
 export interface AppUser{
     id :number,
     lastname :string ,
@@ -8,13 +10,17 @@ export interface AppUser{
     email:string
     dob :Date,
     lang:string,
-    joinMail:boolean
-    coverUrl:string,
+   
+   
     photoUrl:string
     bio:string
-    jobTitle:string
-    adresse :string
+   
+    address :Address
     gender:string
+   
+    category:Category
+   
+    profilePro:ProfilePro
     educations:EduExp[],
     experiences:EduExp[]
 }

@@ -1,65 +1,39 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { CategoryService } from 'src/app/Services/service/category.service';
+import { Category } from 'src/app/models/Category';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent {
-  dynamicSlides = [
-    {
-      id: 1,
-      src:'../../../../assets/images/imgcarousel/mecanicin.jpg',
-      alt:'mecanicin',
-      title:'mecanicin'
-    },
-    {
-      id: 2,
-      src:'../../../../assets/images/imgcarousel/medecin.jpg',
-      alt:'medecin',
-      title:'medecin'
-    },
-    {
-      id: 3,
-      src:'../../../../assets/images/imgcarousel/plombier.jpg',
-      alt:'plombier',
-      title:'plombier'
-    },
-    {
-      id: 4,
-      src:'../../../../assets/images/imgcarousel/retaurant.jpg',
-      alt:'retaurant',
-      title:'retaurant'
-    },
-    {
-      id: 5,
-      src:'../../../../assets/images/imgcarousel/retaurant.jpg',
-      alt:'retaurant',
-      title:'retaurant'
-    },
-    {
-      id: 6,
-      src:'../../../../assets/images/imgcarousel/retaurant.jpg',
-      alt:'retaurant',
-      title:'retaurant'
-    },
-    {
-      id: 7,
-      src:'../../../../assets/images/imgcarousel/retaurant.jpg',
-      alt:'retaurant',
-      title:'retaurant'
-    },
-    {
-      id: 8,
-      src:'../../../../assets/images/imgcarousel/retaurant.jpg',
-      alt:'retaurant',
-      title:'retaurant'
-    }
-  ]
+export class MenuComponent implements OnInit {
 
-  constructor(private route:Router) { }
+  categories: Category[] = [];
+  constructor(private categoryService:CategoryService,private route:Router){}
+
+  ngOnInit(): void {
+    this.loadCategories();
+  }
+
+  loadCategories() {
+    this.categoryService.getAllCategories().subscribe( categories => {
+      this.categories = categories;
+      console.log('================catt====================');
+      console.log(categories);
+      console.log('====================================');
+    },
+    error => {
+      console.error('Error retrieving categories:', error);
+      // Handle error
+    }
+    );
+  }
+ 
+
+ 
  customOptions: OwlOptions = {
    loop: true,
    mouseDrag: true,

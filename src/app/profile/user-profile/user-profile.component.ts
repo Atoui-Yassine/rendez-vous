@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserSettingServiceService } from 'src/app/Services/service/user-setting-service.service';
 
 @Component({
   selector: 'app-user-profile',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./user-profile.component.scss']
 })
 export class UserProfileComponent {
+
+  constructor(public userSettingStateService: UserSettingServiceService) { }
   displayPro=true;
   display = false;
   onPress() {

@@ -7,9 +7,12 @@
       </mat-calendar>
     </mat-card-content>
   </mat-card>
- <div class="date_heures" *ngIf="selected"  >
-   <div  class="heures" *ngFor="let heure of heures" (click)="selectedHeure(heure)">
+ <div class="date_heures  " *ngIf="selected"  >
+   <div  class="heures" [ngClass]="{'selected_h': heure === selected_h}" *ngFor="let heure of heures" (click)="selectedHeure(heure)">
   {{heure.h}}
    </div>
+   
+ 
  </div>
+
  

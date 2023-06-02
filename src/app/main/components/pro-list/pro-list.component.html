@@ -1,5 +1,5 @@
 <div class="row " >
-    <div *ngFor="let subcategory of Allsubcategories" class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3" >
+    <div *ngFor="let user of users" class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3" >
         <div class="services-item item-elementor">
           <div class="item service-border st-border-radius">
             <div class="featured-image">
@@ -18,23 +18,24 @@
                 </div>
               </a>
               <a routerLink="">
-                <img [src]="subcategory.srcsub" class="st-hover-grow">
+                <img [src]="src+user.category.image.url" class="st-hover-grow">
               </a>
               <a routerLink="" class="service-avatar">
-                <img width="70" height="70" [src]="subcategory.srcavatar"  class="avatar round">
+                <img width="70" *ngIf="user.photoUrl" height="70" [src]="src+user.photoUrl"  class="avatar round">
+                <img width="70" *ngIf="!user.photoUrl" height="70" src="../../../../assets/images/avatar.png"  class="avatar round">
               </a>
             </div>
             <div class="content-item">
               <div class="sub-title st-address d-flex align-items-center">
-                <span>
+                <span >
                   <i class="stt-icon-location1">
                   </i>
-                  {{subcategory.location}}
+                  {{user.address.country}}
                 </span>
               </div>
               <h3 class="title">
-                <a routerLink="" class="st-link c-main">
-                  DUPLEX GREENWICH
+                <a (click)="navigateToProfile(user.id)" profilePro class="st-link c-main">
+                  {{user.lastname+" "+user.firstname}}
                 </a>
               </h3>
               <div class="amenities d-flex align-items-center clearfix">
@@ -49,19 +50,7 @@
                   </span>
                   3                
                 </span>
-                <!-- <span class="amenity d-flex align-items-center">
-                  <span class="stt-icon-bathtub">
-                  </span>
-                  2                
-                </span> -->
-                <!-- <span class="amenity d-flex align-items-center">
-                  <span class="stt-icon-area">
-                  </span>
-                  312m
-                  <sup>
-                    2
-                  </sup>
-                </span> -->
+              
               </div>
               <div class="reviews">
                 <i class="stt-icon-star1">
@@ -78,10 +67,10 @@
                   <span>
                     <span class="price d-flex align-items-center justify-content-around">
                       <span class="price">
-                        €300,00
+                        {{user.profilePro.priceHeure}} (DT)
                       </span>
                       <span class="unit">
-                        / 1 night(s)
+                        / {{user.profilePro.duration}} (min)
                       </span>
                     </span>
                   </span>

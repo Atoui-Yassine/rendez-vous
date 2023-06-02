@@ -1,41 +1,34 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { InfosServiceService } from 'src/app/Services/service/infos-service.service';
+import { AppUser } from 'src/app/models/AppUser';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-pro-list',
   templateUrl: './pro-list.component.html',
   styleUrls: ['./pro-list.component.scss']
 })
-export class ProListComponent {
-  Allsubcategories = [
-    {
-      id: 1,
-      srcsub:'https://modrent.travelerwp.com/wp-content/uploads/2022/05/Premium-bedding-minibar-in-room-safe-desk-2-450x300.jpg',
-      srcavatar:'https://modrent.travelerwp.com/wp-content/uploads/2022/05/32-1.jpg',
-      location:'San Francisco'
-    },
-    {
-      id: 1,
-      srcsub:'https://modrent.travelerwp.com/wp-content/uploads/2022/05/Premium-bedding-minibar-in-room-safe-desk-2-450x300.jpg',
-      srcavatar:'https://modrent.travelerwp.com/wp-content/uploads/2022/05/32-1.jpg',
-      location:'San Francisco'
-    },
-    {
-      id: 1,
-      srcsub:'https://modrent.travelerwp.com/wp-content/uploads/2022/05/Premium-bedding-minibar-in-room-safe-desk-2-450x300.jpg',
-      srcavatar:'https://modrent.travelerwp.com/wp-content/uploads/2022/05/32-1.jpg',
-      location:'San Francisco'
-    },
-    {
-      id: 1,
-      srcsub:'https://modrent.travelerwp.com/wp-content/uploads/2022/05/Premium-bedding-minibar-in-room-safe-desk-2-450x300.jpg',
-      srcavatar:'https://modrent.travelerwp.com/wp-content/uploads/2022/05/32-1.jpg',
-      location:'San Francisco'
-    },
-    {
-      id: 1,
-      srcsub:'https://modrent.travelerwp.com/wp-content/uploads/2022/05/Premium-bedding-minibar-in-room-safe-desk-2-450x300.jpg',
-      srcavatar:'https://modrent.travelerwp.com/wp-content/uploads/2022/05/32-1.jpg',
-      location:'San Francisco'
-    },
-  ]
+export class ProListComponent implements OnInit {
+  users?: AppUser[];
+  src=environment.apibas;
+  constructor(private userService:InfosServiceService,private router:Router){}
+ 
+  ngOnInit() {
+    this.userService.loadUserpro()
+      .subscribe(users => {
+        this.users = users;
+        console.log('=====================user===============');
+        console.log(users[1]);
+        console.log('====================================');
+      });
+  }
+
+  navigateToProfile(id:any){
+    
+      this.router.navigate(['/profile', id]);
+    
+  }
+
+
 }

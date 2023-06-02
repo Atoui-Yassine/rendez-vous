@@ -2,9 +2,10 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     overflow: hidden;
+    margin-bottom: 10px;
 
     &::ng-deep .mat-calendar-controls{
-        background: #601ff7;
+        background-color: #0696D6;
         margin: 0;
         border-radius: 10px 10px 0 0;
             font-size: 16px;
@@ -34,7 +35,7 @@
         position: absolute;
         right: 0;
         top: 30px;
-        margin-right: 6px;
+        margin-right: 14px;
         &.mat-calendar-next-button::after{
             color: white;
             height: 9px;
@@ -98,7 +99,7 @@
     display: flex;
     flex-wrap: wrap;
     width: 90%;
-    margin: 10px;
+    margin: 10px !important;
     justify-content: space-between;
     .heures{
         width: 20%;
@@ -115,7 +116,11 @@
             color: white;
             background:  rgba(0, 89, 255, 0.911);
         }
+        &.selected_h{
+            background-color: aqua;
+        }
         
     }
+   
 }
- 
+

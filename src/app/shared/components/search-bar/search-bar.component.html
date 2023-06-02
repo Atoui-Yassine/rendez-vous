@@ -1,21 +1,24 @@
 
 <div class="searchbar">
+    <form [formGroup]="searchForm"
+    (ngSubmit)="searchForm.valid && search()">
     <div class="search_bx">
         <div class="card">
             <i class="bi bi-geo-alt"></i> 
             <h4>Location</h4>
-            <input type="text" placeholder="Location">
+            <input formControlName="country" type="text" placeholder="Location">
         </div>
         <div class="card">
             <i class="bi bi-calendar-check"></i>
             <h4> Date</h4>
-            <input type="date">
+            <input  type="date">
         </div>
         <div class="card">
             <i class="bi bi-grid"></i>
             <h4> Catégorie</h4>
-            <input type="text" placeholder="Catégorie">
+            <input type="text" formControlName="cat_name" placeholder="Catégorie">
         </div>
-        <input type="button" value="Search">
+        <button value="Search">Search</button>
     </div>
+</form>
 </div>

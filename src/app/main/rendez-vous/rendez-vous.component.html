@@ -1,23 +1,6 @@
 <div class="main">
     <div class="indicator">
-        <ul class="progress_indicator">
-            <li class="active">
-                <samp class="bubble"></samp>
-                Date/heure
-            </li>
-            <li class="active">
-                <samp class="bubble"></samp>
-                verification
-            </li>
-            <li class="active">
-                <samp class="bubble"></samp>
-                confirmation
-            </li>
-            <li class="active">
-                <samp class="bubble end_bubble"></samp>
-                Sucsse
-            </li>
-        </ul>
+       
         <div class="card_category">
             <div class="card_category_top">
                 <div class="card_img">
@@ -33,10 +16,14 @@
                 </div>
             </div>
             <div class="category_section">
-                <app-date-calendar></app-date-calendar>
-                <!-- <app-description></app-description> -->
+                <app-date-calendar ></app-date-calendar> 
+                <app-description ></app-description>
             </div>
-             
+            <div class=" d-flex me-2  mt-2 justify-content-end ">
+                <button class="btn btn-sm  btn-primary me-2" >confirmer</button>
+                <button class="btn btn-sm btn-danger">Annule</button>
+               </div>
+              
         </div>
     </div>
 </div>

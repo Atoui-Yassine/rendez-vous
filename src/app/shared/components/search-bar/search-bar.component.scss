@@ -35,7 +35,7 @@
                 transition: .3s linear;
                 color: rgb(148, 144, 144);
             }
-            input{
+            button ,input{
                 margin-left: 20px;
                 margin-top: 2px;
                 padding: 2px 0px;
@@ -46,7 +46,7 @@
             }
             
         }
-        input[type="button"]{
+        button{
             background-color: #000;
             color: #fff;
             border: none;
@@ -71,7 +71,7 @@
            .card{
             width: 100%;
            }
-                input[type="button"]{
+           button{
                     
                    width: 100%;
 
